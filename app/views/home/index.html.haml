@@ -1,0 +1,22 @@
+#todoList{"ng:controller" => "TodosController"}
+  %h2
+    Todos
+  
+  %input#new-todo{"ng:insertnewline" => "addTodo(todo)", :name => "todo.title", :type => "text", :placeholder => "What needs to be done?"}
+  
+  #stats
+    %button.button{"ng:click" => "clearCompletedTodos()"}
+      Clear Completed Todos 
+    {{remaining()}} remaining
+      
+  .mark-all-done
+    %input{:id => "mark_all_done", :type => "checkbox", "name" => "allCompleted", "ng:change" => "markAllCompleted()"}
+    %label{:for => "mark_all_done"}
+      Mark All Done
+      
+  %ul
+    %li{"ng:repeat" => "todo in todos", "ng:class" => "'done-'+todo.completed"}
+      %input{:id => "todo-{{$index}}", :type => "checkbox", :name => "todo.completed"}
+      %label{:for => "todo-{{$index}}"}
+        {{todo.title}}
+  

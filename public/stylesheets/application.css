@@ -1,0 +1,87 @@
+/* line 3, sass/application.sass */
+body {
+  background-color: #4b7399;
+  font-family: Verdana, Helvetica, Arial;
+  font-size: 14px;
+}
+
+/* line 9, sass/application.sass */
+a {
+  color: blue;
+}
+/* line 11, sass/application.sass */
+a img {
+  border: none;
+}
+
+/* line 14, sass/application.sass */
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+
+/* line 19, sass/application.sass */
+#container {
+  width: 75%;
+  margin: 0 auto;
+  background: white;
+  padding: 20px 40px;
+  border: solid 1px black;
+  margin-top: 20px;
+}
+
+/* line 27, sass/application.sass */
+#flash_notice,
+#flash_error,
+#flash_alert {
+  padding: 5px 8px;
+  margin: 10px 0;
+}
+
+/* line 33, sass/application.sass */
+#flash_notice {
+  background-color: #ccffcc;
+  border: solid 1px #66cc66;
+}
+
+/* line 37, sass/application.sass */
+#flash_error,
+#flash_alert {
+  background-color: #ffcccc;
+  border: solid 1px #cc6666;
+}
+
+/* line 42, sass/application.sass */
+.fieldWithErrors {
+  display: inline;
+}
+
+/* line 45, sass/application.sass */
+.error_messages {
+  width: 400px;
+  border: 2px solid #cf0000;
+  padding: 0;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  font-size: 12px;
+}
+/* line 54, sass/application.sass */
+.error_messages h2 {
+  text-align: left;
+  padding: 5px 5px 5px 15px;
+  margin: 0;
+  font-weight: bold;
+  font-size: 12px;
+  background-color: #cc0000;
+  color: white;
+}
+/* line 63, sass/application.sass */
+.error_messages p {
+  margin: 8px 10px;
+}
+/* line 65, sass/application.sass */
+.error_messages ul {
+  margin: 0;
+}
