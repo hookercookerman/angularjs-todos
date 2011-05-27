@@ -1,5 +1,7 @@
 ## Todos Example Using [Angularjs](http://angularjs.org/#) ##
 
+http://hookercookerman.github.com/angularjs-todos/
+
 This example application was taken from the example Sproutcore Todo Application and Ported to angularjs
 for my own experimentation; basically I wanted to see what the differences were etc;
 
