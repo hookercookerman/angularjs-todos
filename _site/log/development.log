@@ -1,0 +1,12 @@
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-27 11:26:30 +0100
+  Processing by HomeController#index as HTML
+Rendered home/index.html.haml within layouts/application (7.2ms)
+Completed 200 OK in 156ms (Views: 155.4ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2011-05-27 11:26:32 +0100
+
+Served asset /application.css - 304 Not Modified  (0.00116s)  (pid 98959)
+
