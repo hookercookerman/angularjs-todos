@@ -1,0 +1,23 @@
+@mixin site-theme($theme, $page-bg, $text, $strong-text, $heading, $link, $code, $nav-link, $main-nav, $main-nav-selected){
+  background: $page-bg;
+  
+  body { 
+    background: $page-bg; color: $text;
+    a{ 
+      color: $link; 
+    } 
+  }
+}
+
+@mixin dark-theme() {
+  $page-bg: #2f2f2f;
+  $text: #c6c6c6;
+  $heading: white;
+  $strong-text: #dbdbdb;
+  $code: #dadbb1;
+  $nav-link: #bfbfbf;
+  $link: saturate(lighten(#85AFC9, 4), 19);
+  $main-nav: white;
+  $main-nav-selected: #fb292d;
+  @include site-theme(dark, $page-bg, $text, $strong-text, $heading, $link, $code, $nav-link, $main-nav, $main-nav-selected);
+}

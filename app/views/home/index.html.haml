@@ -1,8 +1,7 @@
 #todoList{"ng:controller" => "TodosController"}
   %h2
-    Todos
-  
-  %input#new-todo{"ng:insertnewline" => "addTodo(todo)", :name => "todo.title", :type => "text", :placeholder => "What needs to be done?"}
+    Todos - AngularJs
+  %input#new-todo{"ng:insertnewline" => "addTodo(todo)", :name => "todo.title", :type => "text", :placeholder => "Type a todo and Hit Enter"}
   
   #stats
     %button.button{"ng:click" => "clearCompletedTodos()"}

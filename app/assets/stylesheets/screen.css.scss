@@ -1,0 +1,121 @@
+@import "compass/css3";
+@import "compass/reset";
+
+/* CSS Reset */
+@include global-reset;
+
+@import "partials/theme";
+html.dark { 
+  font-family: 'Carter One', arial, serif; 
+  @include dark-theme(); 
+}
+
+$width: 600px;
+$border: 1px solid #000;
+$header-height: 40px;
+$padding: 10px;
+
+@mixin button {
+  color: #000;
+  float: right;
+  padding: 0 5px;
+  height: 25px;
+  &:hover {
+    cursor: pointer;
+  }
+  &.is-active {
+  }
+}
+
+#todoList{
+  h2 {
+    @include border-top-radius(8px);
+    font-size:40px;
+    position: absolute;
+    width: $width;
+    height: $header-height;
+    top: 0;
+    left: 0;
+    padding: ($padding / 2) $padding;
+    border-bottom: $border;
+  }
+}
+
+#todoList {
+  @include box-shadow(rgba(#000, .5) 0 2px 10px inset, rgba(#fff, .3) 0 1px 2px 0px, rgba(#000, .8) 0 0 0 1px inset);
+  @include border-radius(8px);
+  color: #cccc00;
+
+  position: absolute;
+  width: $width;
+  left: 50%;
+  margin-top: 40px;
+  margin-left: -300px;
+  padding: ($header-height + $padding * 2) $padding $padding;
+
+  input[type="text"], input[type="password"] {
+    width: $width - ($padding) - 2px;
+    font-size: 30px;
+    padding: 5px;
+  }
+
+  .mark-all-done label {
+    margin-left: 5px;
+    font-weight: bold;
+  }
+
+  #stats {
+    overflow: hidden;
+    width: 100%;
+    padding: 5px $padding;
+    margin: $padding ($padding * -1);
+    @include box-shadow(rgba(#000, .5) 0 2px 10px inset, rgba(#fff, .3) 0 1px 2px 0px, rgba(#000, .8) 0 0 0 1px inset);
+    line-height: 25px;
+    .remaining {
+      float: left;
+    }
+    .button {
+      @include button;
+    }
+  }
+
+  .todoList {
+    width: $width;
+    float: right;
+  }
+
+  .checkbox {
+    input[type="checkbox"] {
+      margin-right: 7px;
+    }
+  }
+
+  ul {
+    margin-left: 0px;
+    margin-right: 0px;
+
+    li {
+      padding: 5px;
+      @include box-shadow(rgba(#000, .5) 0 2px 10px inset, rgba(#fff, .3) 0 1px 2px 0px, rgba(#000, .8) 0 0 0 1px inset);
+      &.done-true {
+        color: #B7B7B7;
+        text-decoration: line-through;
+      }
+    }
+  }
+}
+#todos {
+  input[type='text'], input[type='password'] {
+    @include border-radius(5px);
+    @include box-shadow(rgba(0,0,0,0.6), 0, 0, 10px, -2px);
+    color: #999;
+    background-color: rgb(240,240,240);
+    font-family: Helvetica, sans-serif;
+    border: $border;
+    font-weight: 500;
+
+    &::-webkit-input-placeholder {
+      color: #cccc00;
+    }
+  }
+}

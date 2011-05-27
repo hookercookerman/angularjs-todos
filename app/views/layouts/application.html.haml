@@ -1,5 +1,5 @@
 !!!
-%html{"xmlns:ng" => "http://angularjs.org"}
+%html{:class => "dark", "xmlns:ng" => "http://angularjs.org"}
 
   %head
     %title
@@ -7,6 +7,8 @@
     %meta{"http-equiv"=>"Content-Type", :content=>"text/html; charset=utf-8"}/
     = stylesheet_link_tag "application"
     = javascript_include_tag "application"
+    :plain
+      <link href='http://fonts.googleapis.com/css?family=Carter+One' rel='stylesheet' type='text/css'>
     = csrf_meta_tag
     = yield(:head)
 
